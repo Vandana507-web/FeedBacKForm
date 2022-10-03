@@ -1,1 +1,41 @@
-<p>preview works!</p>
+<div *ngIf="formSubmitted">
+    Details Sumbitted Successfully
+</div>
+
+<div *ngIf="!formSubmitted">
+<h4>PLeaser verify before Submit</h4>
+
+<div>
+    Name: {{form.get('personalDetail')!.get('userName')!.value}}
+</div>
+
+<div>
+    Email: {{form.get('personalDetail')!.get('email')!.value}}
+</div>
+<div>
+    Phone No: {{form.get('personalDetail')!.get('phoneNo')!.value}}
+</div>
+<div>
+Step A: {{form.get('queOne')!.get('qOne')!.value}}
+</div>
+<div>
+Step B {{form.get('queTwo')!.get('qTwo')!.value}}
+</div>
+
+<div>
+ Step C {{form.get('queThree')!.get('qThree')!.value}}
+</div>
+<div>
+ Step D: {{form.get('queFour')!.get('qFour')!.value}}
+</div>
+<div>
+Comments: {{form.get('queFive')!.get('qFive')!.value}}
+</div>
+<br>
+
+<button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="submit()" >Submit</button>
+
+</div>
+
+{{data | json}}

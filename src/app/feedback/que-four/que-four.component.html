@@ -1,6 +1,6 @@
-<div [formGroup] ="form" >
+<div class="form-control" [formGroup] ="form" >
     <div formGroupName ="queFour">
-        <mat-form-field  appearance ="fill" >
+        <mat-form-field  appearance ="outline" >
             <mat-label>Topics</mat-label>
             <mat-select formControlName ="qFour" multiple>
             <mat-option *ngFor ="let topic of topicList" [value]="topic">{{topic}}</mat-option>

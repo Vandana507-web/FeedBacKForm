@@ -1,6 +1,6 @@
-<div [formGroup] ="form" >
+<div class="form-control" [formGroup] ="form" >
     <div formGroupName ="queFive">
-        <mat-form-field  class ="example-full-width" appearance ="fill" >
+        <mat-form-field  class ="example-full-width" appearance ="outline" >
             <mat-label>Leave a comment</mat-label>
             <textarea matInput formControlName ='qFive' required placeholder="Ex.It makes feel..."></textarea>
         </mat-form-field>
@@ -8,6 +8,6 @@
 
     <div>
         <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext >Next</button>
+        <button mat-button matStepperNext >Preview</button>
     </div>
 </div>

@@ -8,6 +8,7 @@ import {FormControl,FormGroup,Validators} from  '@angular/forms';
 })
 export class QueFiveComponent implements OnInit {
   @Input()form!: FormGroup;
+  
 
   constructor() { }
 

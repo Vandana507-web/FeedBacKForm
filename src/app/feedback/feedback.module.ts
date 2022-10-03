@@ -10,8 +10,8 @@ import { QueTwoComponent } from './que-two/que-two.component';
 import { PreviewComponent } from './preview/preview.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
-import {HttpClient} from '@angular/common/http';
-import { MatModule } from '../mat/mat.module';
+import { MatModule } from '../mat.module';
+
 
 
 
@@ -24,16 +24,14 @@ import { MatModule } from '../mat/mat.module';
     QueOneComponent,
     QueThreeComponent,
     QueTwoComponent,
-    PreviewComponent,
-    HttpClient
+    PreviewComponent
   ],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
     FormsModule,
-    
-    MatModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatModule
 
   ]
 })
