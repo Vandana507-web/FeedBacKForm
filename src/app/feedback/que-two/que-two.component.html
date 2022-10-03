@@ -1,0 +1,17 @@
+<div [formGroup] ="form" >
+    <div formGroupName ="queTwo">
+
+        <mat-form-field  appearance ="fill" >
+            <mat-label>Select an option</mat-label>
+            <mat-select formControlName="qTwo" required disableRipple>
+                <mat-option value ="Yes"> Yes </mat-option>
+                <mat-option value ="No"> No </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext >Next</button>
+    </div>
+</div>
