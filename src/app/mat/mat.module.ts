@@ -51,6 +51,7 @@ import {DialogModule} from '@angular/cdk/dialog';
 @NgModule({
   exports: [
     MatDatepickerModule,
+    MatAutocompleteModule,
 MatStepperModule,
 MatChipsModule,
 MatCheckboxModule,
