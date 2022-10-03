@@ -1,7 +1,7 @@
 <form id ="form" [formGroup]="feedBackForm" >
     <mat-stepper  #stepper linear="true">
         <mat-step formGroupName="personalDetail" [stepControl] ="feedBackForm.get('personalDetail')! ">
-            <ng-template matStepLabel>Personal Details</ng-template>
+            <ng-template matStepLabel>Personal DetailsNew</ng-template>
             <app-personal-details [form]="feedBackForm" ></app-personal-details>
         </mat-step>
         <!--label----->
