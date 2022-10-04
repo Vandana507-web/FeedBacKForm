@@ -8,7 +8,7 @@ import { catchError } from 'rxjs/operators';
 })
 export class HttpsProviderService {
 
-  private apiServer = "http://localhost:";
+  private apiServer = "https://localhost:7000/api";
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -17,34 +17,34 @@ export class HttpsProviderService {
   constructor(private httpClient: HttpClient) { }
 
   create(data:any): Observable<any> {
-    return this.httpClient.post<any>(this.apiServer + '/feedbackform', JSON.stringify(data), this.httpOptions)
+    return this.httpClient.post<any>(this.apiServer + '/FeedbackForm', JSON.stringify(data), this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )
   }
   getById(id:number): Observable<any> {
-    return this.httpClient.get<any>(this.apiServer + '/feedbackform/' + id)
+    return this.httpClient.get<any>(this.apiServer + '/FeedbackForm/' + id)
     .pipe(
       catchError(this.errorHandler)
     )
   }
 
   getAll(): Observable<any> {
-    return this.httpClient.get<any>(this.apiServer + '/feedbackform')
+    return this.httpClient.get<any>(this.apiServer + '/FeedbackForm')
     .pipe(
       catchError(this.errorHandler)
     )
   }
 
   update(id:number, data:any): Observable<any> {
-    return this.httpClient.put<any>(this.apiServer + '/feedbackform/' + id, JSON.stringify(data), this.httpOptions)
+    return this.httpClient.put<any>(this.apiServer + '/FeedbackForm/' + id, JSON.stringify(data), this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )
   }
 
   delete(id:number){
-    return this.httpClient.delete(this.apiServer + '/feedbackform/' + id, this.httpOptions)
+    return this.httpClient.delete(this.apiServer + '/FeedbackForm/' + id, this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )

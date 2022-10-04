@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormGroup ,FormControl, Validators ,FormBuilder} from '@angular/forms';
 
 @Component({
   selector: 'app-personal-details',
@@ -7,12 +7,25 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./personal-details.component.css']
 })
 export class PersonalDetailsComponent implements OnInit {
+  emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
+  title = 'email-validation-tutorial';
+  myForm!: FormGroup;
+ 
+  createForm() {
+   this.myForm = this.fb.group({
+      username: ['', Validators.required ]
+   });
+ }
+formBuilder !:FormBuilder
 
-
+feedBackForm! : FormGroup;
   @Input() form!:FormGroup;
-    constructor() { }
+    constructor(private fb:FormBuilder) { 
+      this.createForm();
+    }
 
   ngOnInit(): void {
+    
   }
 
 step1Submit(){

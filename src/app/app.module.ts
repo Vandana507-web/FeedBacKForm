@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FeedbackModule } from './feedback/feedback.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MatModule } from './mat.module';
 
 
 @NgModule({
@@ -18,10 +19,13 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     FeedbackModule,
-    HttpClientModule
+    HttpClientModule,
+    MatModule
 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+}
