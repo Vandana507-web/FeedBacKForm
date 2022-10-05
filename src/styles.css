@@ -89,3 +89,7 @@ div.center-text {
   font-size: 20px;
   margin-top: 19%;
 }
+.mat-input-placeholder-wrapper {
+  top: -1em;
+  left:3em;
+}

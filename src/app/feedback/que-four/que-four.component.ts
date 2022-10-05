@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {FormGroup} from  '@angular/forms';
+import { SharedServiceService } from 'src/app/service/shared-service.service';
 
 @Component({
   selector: 'app-que-four',
@@ -9,16 +10,17 @@ import {FormGroup} from  '@angular/forms';
 export class QueFourComponent implements OnInit {
 
   @Input() form !:FormGroup;
+  topicList!: string[];
 
-  constructor() { }
+  constructor(private shareedSerice: SharedServiceService) { }
 
   ngOnInit(): void {
-    this.topicList =this.softwareList;
+    
   }
 
-  topicList :string[] =[];
-  softwareList :string[]=['Forntend','Backend','DataBase','CI/CD','Azure'];
-  researchList :string[]=['Areas of research','Data processing','Data analysis','People Management','Time Management'];
-
+  loadRepsonse()
+  {
+    this.topicList =this.shareedSerice.topics;
+  }
 
 }

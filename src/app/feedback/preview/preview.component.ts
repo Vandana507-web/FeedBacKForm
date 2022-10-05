@@ -30,7 +30,7 @@ export class PreviewComponent implements OnInit {
         data:{
           message: 'Are you sure want to '+text+'?',
           buttonText: {
-            ok: 'Save',
+            ok: 'Submit',
             cancel: 'No'
           }
         }
@@ -55,7 +55,7 @@ export class PreviewComponent implements OnInit {
         {
         next: (response) => {
           
-          this.openAlertDialog('Feedback  Saved . Thanks for the Response');
+          this.openAlertDialog('Feedback  Saved . Thanks for the Your Valuable Response. Have a Good Day !');
           this.form.reset();
           this.form.root;
         },

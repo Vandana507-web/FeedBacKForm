@@ -1,19 +1,30 @@
 <div class="form-control" [formGroup] ="form" >
     <div formGroupName ="personalDetail">
+        <div>
+            <h2>Enter your Details below:</h2>
+</div>
+        
         <mat-form-field  appearance ="outline" >
             <mat-label>User name</mat-label>
-            <div>
-            <input matInput formControlName ="userName" placeholder="user Name" class="form-control" maxlength="20" required>
-            </div>
+           
+            <input matInput formControlName ="userName" placeholder="Enter your name" class="form-control" maxlength="20" required>
+            <mat-hint *ngIf=" perSonalDetailsControl['userName'].touched">
+                <mat-hint *ngIf="perSonalDetailsControl['userName'].errors?.['required']">UserName is required</mat-hint>
+                <mat-hint *ngIf="perSonalDetailsControl['userName'].errors?.['userName']">Enter userName  Id</mat-hint> 
+        </mat-hint>
+            
             
         </mat-form-field>
     </div>
 
     <div formGroupName ="personalDetail">
         <mat-form-field  appearance ="outline" >
-            <mat-label>Email</mat-label>
-            <input matInput formControlName ="email" placeholder="email" required>
-            <mat-hint>Please enter Valid Email Id</mat-hint>
+            <mat-label>Email ID</mat-label>
+            <input matInput formControlName ="email" placeholder="Enter your email-id" required>
+            <mat-hint *ngIf=" perSonalDetailsControl['email'].touched">
+                <mat-hint *ngIf="perSonalDetailsControl['email'].errors?.['required']">Email ID is required</mat-hint>
+                <mat-hint *ngIf="perSonalDetailsControl['email'].errors?.['email']">Enter valid Email Id</mat-hint> 
+        </mat-hint>
         </mat-form-field>
    
     </div>
@@ -21,8 +32,11 @@
     <div formGroupName ="personalDetail">
         <mat-form-field  appearance ="outline" >
             <mat-label>Phone no</mat-label> 
-            <input matInput formControlName ="phoneNo" placeholder="phone no" required >
-            <mat-hint>Please enter Valid Phone Number</mat-hint>
+            <input matInput formControlName ="phoneNo" placeholder="Enter your phone number" required >
+            <mat-hint *ngIf=" perSonalDetailsControl['phoneNo'].touched">
+                <mat-hint *ngIf="perSonalDetailsControl['phoneNo'].errors?.['required']"> Phone Number is mandatory</mat-hint>
+                <mat-hint *ngIf="perSonalDetailsControl['phoneNo'].errors?.['pattern']">Enter valid Phone number</mat-hint> 
+        </mat-hint>
         </mat-form-field>
     </div>
 

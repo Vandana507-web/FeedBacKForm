@@ -38,19 +38,12 @@ export class FeedbackformComponent implements OnInit {
       'personalDetail': new FormGroup({
         'userName': new FormControl(null,[Validators.required]),
         'email': new FormControl (null,[Validators.required,Validators.email]),
-       'phoneNo': new FormControl (null,[Validators.required,Validators.pattern(("^((\\+91-?)|0)?[0-9]{10}$"))]),
+       'phoneNo': new FormControl (null,[Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]),
 
       }),
 
 
-     /* this.feedBackForm = this.formBuilder.group({
-        userName: ['', Validators.required],
-       
-        email: ['', [Validators.required, Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
-        phoneNo: ['', [Validators.required, Validators.minLength(6)]]
-    }),*/
-
-    //this.feedBackForm = new FormGroup({
+     
 
       'queOne': new FormGroup ({
         'qOne': new FormControl(null,Validators.required),
@@ -68,7 +61,7 @@ export class FeedbackformComponent implements OnInit {
         'qFour': new FormControl(null, Validators.required)
       }),
       'queFive': new FormGroup({
-        'qFive': new FormControl(null, Validators.required)
+        'qFive': new FormControl(null)
       }),
      
       

@@ -7,7 +7,6 @@ import { FormGroup ,FormControl, Validators ,FormBuilder} from '@angular/forms';
   styleUrls: ['./personal-details.component.css']
 })
 export class PersonalDetailsComponent implements OnInit {
-  emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
   title = 'email-validation-tutorial';
   myForm!: FormGroup;
  
@@ -35,7 +34,10 @@ step1Submit(){
   this.form.get('personalDetail')!.get('email')!.updateValueAndValidity;
   this.form.get('personalDetail')!.get('phoneNo')!.markAllAsTouched;
   this.form.get('personalDetail')!.get('phoneNo')!.updateValueAndValidity;
-
+  this.form.get('personalDetail')!.get('userName')!.touched;
 }
+get perSonalDetailsControl(){
+  return ((this.form.get('personalDetail') as FormGroup).controls)
+  }
 
 }

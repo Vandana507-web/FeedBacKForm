@@ -1,6 +1,7 @@
 <div class="form-control" [formGroup] ="form" >
     <div formGroupName ="queTwo">
-
+<div><h2>Was the person conducting the interview or discussion on time?</h2></div>
+<br>
         <mat-form-field  appearance ="outline" >
             <mat-label>Select an option</mat-label>
             <mat-select formControlName="qTwo" required disableRipple>
@@ -13,7 +14,7 @@
     
         
     <div class="example-button-row">
-        <button mat-flat-button  color ="back" matStepperNext >Back </button>
+        <button mat-flat-button  color ="back" matStepperPrevious >Back </button>
         <button mat-flat-button color="next" matStepperNext>Next</button>
     </div>
 
