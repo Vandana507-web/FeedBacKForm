@@ -81,3 +81,11 @@ div.center-text {
   border: 1px solid #c5c0c7;
   background-color: #e1dde5; 
 }
+.mat-card{
+  color:white;
+  background-color: #303F9F;
+  border-radius: 0px;
+  text-align:center;
+  font-size: 20px;
+  margin-top: 19%;
+}

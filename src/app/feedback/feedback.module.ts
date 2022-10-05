@@ -15,6 +15,7 @@ import { MatModule } from '../mat.module';
 
 
 
+
 @NgModule({
   declarations: [
     FeedbackformComponent,
@@ -25,6 +26,7 @@ import { MatModule } from '../mat.module';
     QueThreeComponent,
     QueTwoComponent,
     PreviewComponent
+    
   ],
   imports: [
     CommonModule,

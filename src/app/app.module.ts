@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FeedbackModule } from './feedback/feedback.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MatModule } from './mat.module';
+import { DialogModule } from '@angular/cdk/dialog';
+import { DialogCustomModule } from './dialog-custom/dialog-custom.module';
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { MatModule } from './mat.module';
     BrowserAnimationsModule,
     FeedbackModule,
     HttpClientModule,
-    MatModule
+    MatModule,
+    DialogCustomModule
 
   ],
   providers: [],
